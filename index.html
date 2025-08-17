@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PPS – The Creative Post-Production Theatre</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap" as="style" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/motion.css" />
+    <script type="module" src="js/reveal.js" defer></script>
+    <script type="module" src="js/parallax.js" defer></script>
+    <script type="module" src="js/cursor.js" defer></script>
+    <script type="module" src="js/magnetic.js" defer></script>
+    <script type="module" src="js/router.js" defer></script>
+    <script type="module" src="js/search.js" defer></script>
+    <script type="module" src="js/tilt.js" defer></script>
+    <script type="module" src="js/progress.js" defer></script>
+    <script type="module" src="js/hire.js" defer></script>
+    <script type="module" src="js/recommend.js" defer></script>
+    <script type="module" src="js/spotlight.js" defer></script>
+  </head>
+  <body class="theme-dark">
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"></div>
+    <nav class="nav" aria-label="main navigation">
+      <div class="nav__brand">PPS</div>
+      <div class="nav__links">
+        <a href="#community">Community</a>
+        <a href="#talent">Talent</a>
+        <a href="#showcase">Reel</a>
+        <a href="#why">Why</a>
+      </div>
+      <div class="nav__actions">
+        <a href="#login" class="nav__auth">Login</a>
+        <button class="btn btn--primary btn--small magnetic" data-link="#join">Sign Up</button>
+      </div>
+    </nav>
+    <header class="hero" id="hero">
+      <video
+        class="hero__video"
+        src="https://www.w3schools.com/howto/rain.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+        aria-hidden="true"
+      ></video>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__inner" data-reveal>
+        <h1 class="hero__title" data-parallax>PPS – The Creative Post-Production Theatre.</h1>
+        <p class="hero__subtitle">Where editors, VFX artists, and cinematographers connect, share, and showcase their craft.</p>
+        <button class="btn btn--primary btn--glass btn--pill hero__cta magnetic" data-link="#community">Enter the Theatre</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="banner" id="banner">
+        <h2 class="section-title">Now Playing</h2>
+        <div class="banner__grid">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline></video>
+          <video src="https://www.w3schools.com/html/movie.mp4" muted loop playsinline></video>
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline></video>
+        </div>
+      </section>
+
+      <section class="spotlight" id="community">
+        <h2 class="section-title">Community Spotlight</h2>
+        <div class="spotlight__marquee">
+          <div class="spotlight__inner">
+            <div class="spotlight__col">
+              <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline></video>
+              <video src="https://www.w3schools.com/html/movie.mp4" muted loop playsinline></video>
+            </div>
+            <div class="spotlight__col">
+              <video src="https://www.w3schools.com/html/movie.mp4" muted loop playsinline></video>
+              <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline></video>
+            </div>
+            <div class="spotlight__col">
+              <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline></video>
+              <video src="https://www.w3schools.com/html/movie.mp4" muted loop playsinline></video>
+            </div>
+            <!-- duplicate columns for seamless scroll -->
+            <div class="spotlight__col">
+              <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline></video>
+              <video src="https://www.w3schools.com/html/movie.mp4" muted loop playsinline></video>
+            </div>
+            <div class="spotlight__col">
+              <video src="https://www.w3schools.com/html/movie.mp4" muted loop playsinline></video>
+              <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline></video>
+            </div>
+            <div class="spotlight__col">
+              <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline></video>
+              <video src="https://www.w3schools.com/html/movie.mp4" muted loop playsinline></video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="talent" id="talent">
+        <h2 class="section-title">Top Talent</h2>
+        <div class="talent__controls">
+          <input
+            type="search"
+            id="talent-search"
+            class="talent__search"
+            placeholder="Search by name or skill"
+            aria-label="search talent"
+          />
+          <select id="talent-sort" class="talent__sort" aria-label="sort talent">
+            <option value="rating">Rating</option>
+            <option value="name">Name</option>
+          </select>
+        </div>
+        <div class="talent__filters"></div>
+        <div class="talent__grid">
+          <article
+            class="card talent-card tilt"
+            data-name="Ava Cortez"
+            data-skills="editing color"
+            data-rating="5"
+            data-available="true"
+            data-reveal
+          >
+            <img
+              src="https://via.placeholder.com/400x250?text=Ava"
+              alt="Portrait of Ava Cortez"
+              loading="lazy"
+            />
+            <h3 class="talent-card__name">Ava Cortez <span class="badge--verified" title="Verified">✔</span></h3>
+            <div class="talent-card__meta">
+              <p class="rating" aria-label="rating 5 out of 5">★★★★★</p>
+              <span class="availability availability--open">Available</span>
+            </div>
+            <p class="skills">
+              <span class="tag">Editing</span><span class="tag">Color</span>
+            </p>
+            <button class="btn btn--secondary btn--small btn--hire magnetic">Hire</button>
+          </article>
+          <article
+            class="card talent-card tilt"
+            data-name="Liam Chen"
+            data-skills="vfx compositing"
+            data-rating="4"
+            data-available="false"
+            data-reveal
+          >
+            <img
+              src="https://via.placeholder.com/400x250?text=Liam"
+              alt="Portrait of Liam Chen"
+              loading="lazy"
+            />
+            <h3 class="talent-card__name">Liam Chen <span class="badge--verified" title="Verified">✔</span></h3>
+            <div class="talent-card__meta">
+              <p class="rating" aria-label="rating 4 out of 5">★★★★☆</p>
+              <span class="availability availability--busy">Busy</span>
+            </div>
+            <p class="skills">
+              <span class="tag">VFX</span><span class="tag">Compositing</span>
+            </p>
+            <button class="btn btn--secondary btn--small btn--hire magnetic">Hire</button>
+          </article>
+          <article
+            class="card talent-card tilt"
+            data-name="Sophia Patel"
+            data-skills="cinematography lighting"
+            data-rating="5"
+            data-available="true"
+            data-reveal
+          >
+            <img
+              src="https://via.placeholder.com/400x250?text=Sophia"
+              alt="Portrait of Sophia Patel"
+              loading="lazy"
+            />
+            <h3 class="talent-card__name">Sophia Patel <span class="badge--verified" title="Verified">✔</span></h3>
+            <div class="talent-card__meta">
+              <p class="rating" aria-label="rating 5 out of 5">★★★★★</p>
+              <span class="availability availability--open">Available</span>
+            </div>
+            <p class="skills">
+              <span class="tag">Cinematography</span><span class="tag">Lighting</span>
+            </p>
+            <button class="btn btn--secondary btn--small btn--hire magnetic">Hire</button>
+          </article>
+        </div>
+      </section>
+      <section class="hub" id="hub">
+        <h2 class="section-title">Creative Hub</h2>
+        <div class="hub__marquee">
+          <div class="hub__inner">
+            <img src="https://via.placeholder.com/300x180?text=Work+1" alt="Work 1" loading="lazy" />
+            <img src="https://via.placeholder.com/300x180?text=Work+2" alt="Work 2" loading="lazy" />
+            <img src="https://via.placeholder.com/300x180?text=Work+3" alt="Work 3" loading="lazy" />
+            <img src="https://via.placeholder.com/300x180?text=Work+4" alt="Work 4" loading="lazy" />
+            <img src="https://via.placeholder.com/300x180?text=Work+5" alt="Work 5" loading="lazy" />
+            <img src="https://via.placeholder.com/300x180?text=Work+6" alt="Work 6" loading="lazy" />
+            <img src="https://via.placeholder.com/300x180?text=Work+1" alt="Work 1" loading="lazy" />
+            <img src="https://via.placeholder.com/300x180?text=Work+2" alt="Work 2" loading="lazy" />
+            <img src="https://via.placeholder.com/300x180?text=Work+3" alt="Work 3" loading="lazy" />
+            <img src="https://via.placeholder.com/300x180?text=Work+4" alt="Work 4" loading="lazy" />
+            <img src="https://via.placeholder.com/300x180?text=Work+5" alt="Work 5" loading="lazy" />
+            <img src="https://via.placeholder.com/300x180?text=Work+6" alt="Work 6" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="categories" id="categories">
+        <h2 class="section-title">Browse by Category</h2>
+        <div class="categories__list">
+          <button class="category-btn is-active" data-category="all">All</button>
+          <button class="category-btn" data-category="effects">Video Effects</button>
+          <button class="category-btn" data-category="music">Music Video</button>
+          <button class="category-btn" data-category="cinema">Cinematography</button>
+        </div>
+      </section>
+
+      <section class="recommended" id="recommended">
+        <h2 class="section-title">Recommended for You</h2>
+        <div class="recommended__grid">
+          <article class="recommended__item tilt" data-category="effects" data-reveal>
+            <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline></video>
+          </article>
+          <article class="recommended__item tilt" data-category="music" data-reveal>
+            <video src="https://www.w3schools.com/html/movie.mp4" muted loop playsinline></video>
+          </article>
+          <article class="recommended__item tilt" data-category="cinema" data-reveal>
+            <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline></video>
+          </article>
+          <article class="recommended__item tilt" data-category="effects" data-reveal>
+            <video src="https://www.w3schools.com/html/movie.mp4" muted loop playsinline></video>
+          </article>
+          <article class="recommended__item tilt" data-category="music" data-reveal>
+            <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop playsinline></video>
+          </article>
+          <article class="recommended__item tilt" data-category="cinema" data-reveal>
+            <video src="https://www.w3schools.com/html/movie.mp4" muted loop playsinline></video>
+          </article>
+        </div>
+      </section>
+
+      <section class="showcase" id="showcase">
+        <h2 class="section-title">Showcase Reel</h2>
+        <div class="carousel" aria-label="showcase reel">
+          <button class="carousel__control prev" aria-label="previous clip">&#10094;</button>
+          <div class="carousel__track">
+            <video class="carousel__slide" src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop></video>
+            <video class="carousel__slide" src="https://www.w3schools.com/html/movie.mp4" muted loop></video>
+            <video class="carousel__slide" src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop></video>
+          </div>
+          <button class="carousel__control next" aria-label="next clip">&#10095;</button>
+          <ul class="carousel__indicators" aria-label="carousel indicators"></ul>
+        </div>
+      </section>
+
+      <section class="why" id="why">
+        <h2 class="section-title">Why PPS?</h2>
+        <div class="why__grid">
+          <article class="feature tilt" data-reveal>
+            <h3>Collaborate</h3>
+            <p>Ask for feedback and learn from the community.</p>
+          </article>
+          <article class="feature tilt" data-reveal>
+            <h3>Showcase</h3>
+            <p>Publish your work to an audience of peers.</p>
+          </article>
+          <article class="feature tilt" data-reveal>
+            <h3>Get Hired</h3>
+            <p>Find paid opportunities and gigs.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-cta" id="join" data-reveal>
+        <h2>Your Theatre Awaits.</h2>
+        <button class="btn btn--secondary magnetic">Join PPS Now</button>
+      </section>
+    </main>
+
+    <script>
+      if (navigator.userAgent.includes('AppleWebKit')) {
+        document.body.classList.add('webkit');
+      }
+    </script>
+  </body>
+</html>
