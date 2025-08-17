@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PPS – The Creative Post-Production Theatre</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap" as="style" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/motion.css" />
+    <script type="module" src="js/reveal.js" defer></script>
+    <script type="module" src="js/parallax.js" defer></script>
+    <script type="module" src="js/cursor.js" defer></script>
+    <script type="module" src="js/magnetic.js" defer></script>
+    <script type="module" src="js/router.js" defer></script>
+    <script type="module" src="js/search.js" defer></script>
+    <script type="module" src="js/tilt.js" defer></script>
+    <script type="module" src="js/progress.js" defer></script>
+  </head>
+  <body class="theme-dark">
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"></div>
+    <nav class="nav" aria-label="main navigation">
+      <div class="nav__brand">PPS</div>
+      <div class="nav__links">
+        <a href="#community">Community</a>
+        <a href="#talent">Talent</a>
+        <a href="#showcase">Reel</a>
+        <a href="#join">Join</a>
+      </div>
+    </nav>
+    <header class="hero" id="hero">
+      <video
+        class="hero__video"
+        src="https://www.w3schools.com/howto/rain.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+        aria-hidden="true"
+      ></video>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__inner" data-reveal>
+        <h1 class="hero__title" data-parallax>PPS – The Creative Post-Production Theatre.</h1>
+        <p class="hero__subtitle">Where editors, VFX artists, and cinematographers connect, share, and showcase their craft.</p>
+        <button class="btn btn--primary magnetic" data-link="#community">Enter the Theatre</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="spotlight" id="community">
+        <h2 class="section-title">Community Spotlight</h2>
+        <div class="spotlight__grid">
+          <article class="card spotlight-card tilt" tabindex="0" data-reveal>
+            <img src="https://via.placeholder.com/400x250?text=Project" alt="Featured project thumbnail" loading="lazy" />
+            <div class="card__body">
+              <h3>Featured Projects</h3>
+              <ul class="preview-list">
+                <li>"Neon Nights" by Ava Cortez</li>
+                <li>"Skyline Chase" by Liam Chen</li>
+              </ul>
+            </div>
+          </article>
+          <article class="card spotlight-card tilt" tabindex="0" data-reveal>
+            <img src="https://via.placeholder.com/400x250?text=Feedback" alt="Feedback thread preview" loading="lazy" />
+            <div class="card__body">
+              <h3>Feedback Threads</h3>
+              <ul class="preview-list">
+                <li>Color grading tips for night scenes</li>
+                <li>VFX breakdown: urban chase</li>
+              </ul>
+            </div>
+          </article>
+          <article class="card spotlight-card tilt" tabindex="0" data-reveal>
+            <img src="https://via.placeholder.com/400x250?text=Gigs" alt="Job postings preview" loading="lazy" />
+            <div class="card__body">
+              <h3>Open Gigs</h3>
+              <ul class="preview-list">
+                <li>Short film colorist needed</li>
+                <li>VFX artist for sci-fi teaser</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="talent" id="talent">
+        <h2 class="section-title">Top Talent</h2>
+        <input
+          type="search"
+          id="talent-search"
+          class="talent__search"
+          placeholder="Search by name or skill"
+          aria-label="search talent"
+        />
+        <div class="talent__filters"></div>
+        <div class="talent__grid">
+          <article
+            class="card talent-card tilt"
+            data-name="Ava Cortez"
+            data-skills="editing color"
+            data-reveal
+          >
+            <img
+              src="https://via.placeholder.com/400x250?text=Ava"
+              alt="Portrait of Ava Cortez"
+              loading="lazy"
+            />
+            <h3>Ava Cortez</h3>
+            <p class="rating">★★★★★</p>
+            <p class="skills">
+              <span class="tag">Editing</span><span class="tag">Color</span>
+            </p>
+          </article>
+          <article
+            class="card talent-card tilt"
+            data-name="Liam Chen"
+            data-skills="vfx compositing"
+            data-reveal
+          >
+            <img
+              src="https://via.placeholder.com/400x250?text=Liam"
+              alt="Portrait of Liam Chen"
+              loading="lazy"
+            />
+            <h3>Liam Chen</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="skills">
+              <span class="tag">VFX</span><span class="tag">Compositing</span>
+            </p>
+          </article>
+          <article
+            class="card talent-card tilt"
+            data-name="Sophia Patel"
+            data-skills="cinematography lighting"
+            data-reveal
+          >
+            <img
+              src="https://via.placeholder.com/400x250?text=Sophia"
+              alt="Portrait of Sophia Patel"
+              loading="lazy"
+            />
+            <h3>Sophia Patel</h3>
+            <p class="rating">★★★★★</p>
+            <p class="skills">
+              <span class="tag">Cinematography</span><span class="tag">Lighting</span>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="showcase" id="showcase">
+        <h2 class="section-title">Showcase Reel</h2>
+        <div class="carousel" aria-label="showcase reel">
+          <button class="carousel__control prev" aria-label="previous clip">&#10094;</button>
+          <div class="carousel__track">
+            <video class="carousel__slide" src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop></video>
+            <video class="carousel__slide" src="https://www.w3schools.com/html/movie.mp4" muted loop></video>
+            <video class="carousel__slide" src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop></video>
+          </div>
+          <button class="carousel__control next" aria-label="next clip">&#10095;</button>
+          <ul class="carousel__indicators" aria-label="carousel indicators"></ul>
+        </div>
+      </section>
+
+      <section class="why" id="why">
+        <h2 class="section-title">Why PPS?</h2>
+        <div class="why__grid">
+          <article class="feature tilt" data-reveal>
+            <h3>Collaborate</h3>
+            <p>Ask for feedback and learn from the community.</p>
+          </article>
+          <article class="feature tilt" data-reveal>
+            <h3>Showcase</h3>
+            <p>Publish your work to an audience of peers.</p>
+          </article>
+          <article class="feature tilt" data-reveal>
+            <h3>Get Hired</h3>
+            <p>Find paid opportunities and gigs.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-cta" id="join" data-reveal>
+        <h2>Your Theatre Awaits.</h2>
+        <button class="btn btn--secondary magnetic">Join PPS Now</button>
+      </section>
+    </main>
+
+    <script>
+      if (navigator.userAgent.includes('AppleWebKit')) {
+        document.body.classList.add('webkit');
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+:root {
+  /* Colors */
+  --color-bg: #0a0a0a;
+  --color-text: #eaeaea;
+  --color-accent-cyan: #00e5ff;
+  --color-accent-purple: #8a2be2;
+  --color-glass: rgba(255, 255, 255, 0.08);
+  --color-glass-border: rgba(255, 255, 255, 0.15);
+
+  /* Typography */
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+
+  /* Sizing */
+  --max-width: 1200px;
+  --radius: 12px;
+  --gutter: clamp(1rem, 2vw, 2rem);
+
+  /* Z-index */
+  --z-cursor: 1000;
+}
